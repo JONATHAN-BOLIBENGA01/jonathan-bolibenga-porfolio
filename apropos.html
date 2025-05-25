@@ -3,67 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos</title>
-    <link rel="stylesheet" href="apropos.css">
+    <title>À Propos - Jonathan Bolibenga Wetokya</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo"><a href="index.html">J.wetoky<span>a</span></a></div>
-            <div class="burger-menu" id="burger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul id="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="apropos.html">À propos</a></li>
-                <li><a href="index.html#competence">Compétences</a></li>
-                <li><a href="index.html#project">project</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Section À Propos -->
-    <section class="about-section">
-       
-        <div class="photo-container">
-            <img src="images/jonathan.png" alt="Votre Photo">
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">J.wetokya</a>
         </div>
-        <div class="about-content">
-            <h1>Hello, je suis Jonathan Bolibenga Wetokya</h1>
-            <p>
-                Je suis un développeur passionné avec une expérience dans divers domaines, y compris le développement web et logiciel. Mon parcours m'a permis d'acquérir des compétences solides dans la création de solutions innovantes qui répondent aux besoins réels des utilisateurs.
-            </p>
-            <p>
-                En plus de mon expertise technique, j'ai également développé des compétences en gestion de projet, ce qui me permet de travailler efficacement en équipe et de mener à bien des projets complexes. Mon objectif est de continuer à apprendre et à évoluer dans ce domaine fascinant.
-            </p>
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </section>
-
-    <!-- Section Informations Personnelles -->
-    <section class="personal-info">
-        <h2>Informations Personnelles</h2>
-        <ul>
-            <li><strong>Ville :</strong> Lubumbashi</li>
-            <li><strong>Pays :</strong> RDCongo</li>
-            <li><strong>Date d'anniversaire :</strong>  01/01/2004</li>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="apropos.html" class="active">À propos</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
+    </nav>
+</header>
+
+<main class="about-page">
+    <!-- Section À Propos Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/placeholder.svg" alt="Jonathan Bolibenga Wetokya" class="profile-img">
+                    <div class="about-image-bg"></div>
+                </div>
+                <div class="about-text">
+                    <h1>Hello, je suis <span class="gradient-text">Jonathan Bolibenga Wetokya</span></h1>
+                    <p class="lead">
+                        Développeur Full Stack passionné avec une solide expérience dans la création d'applications web modernes et performantes.
+                    </p>
+                    <p>
+                        Mon parcours dans le développement web m'a permis d'acquérir une expertise approfondie dans diverses technologies,
+                        du frontend au backend. Je me spécialise dans la création de solutions innovantes qui répondent aux besoins réels
+                        des utilisateurs tout en respectant les meilleures pratiques de développement.
+                    </p>
+                    <p>
+                        Passionné par l'apprentissage continu, je reste constamment à jour avec les dernières tendances technologiques
+                        et j'aime relever de nouveaux défis qui me permettent de repousser mes limites et d'innover.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Section Footer -->
-    <footer>
-        <p>&copy; 2024 Jonathan Bolibenga Wetokya. Made with Love.</p>
-    </footer>
-    <script>
-        document.getElementById('burger-menu').addEventListener('click', function() {
-            var navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('active');
-        });
+    <!-- Section Informations -->
+    <section class="personal-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h2>Informations Personnelles</h2>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Localisation</strong>
+                                <span>Lubumbashi, RD Congo</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <div>
+                                <strong>Date de naissance</strong>
+                                <span>01 Janvier 2004</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <strong>Langues</strong>
+                                <span>Français, Anglais, Swahili</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        AOS.init()
-    </script>
+                <div class="info-card">
+                    <h2>Expertise Technique</h2>
+                    <div class="expertise-list">
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h3>Développement Frontend</h3>
+                                <p>HTML5, CSS3, JavaScript, Vue.js, interfaces utilisateur modernes</p>
+                            </div>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <h3>Développement Backend</h3>
+                                <p>Node.js, NestJS, Express.js, API RESTful, gestion de bases de données</p>
+                            </div>
+                        </div>
+                        <div class="expertise-item">
+                            <div class="expertise-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <h3>Gestion de Données</h3>
+                                <p>SQLite, MySQL, MongoDB, conception et optimisation de schémas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Valeurs -->
+            <div class="values-section">
+                <h2>Mes Valeurs</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>Toujours à la recherche de solutions créatives et technologiques avancées</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaboration</h3>
+                        <p>Travail d'équipe efficace et communication transparente</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Apprentissage</h3>
+                        <p>Formation continue et adaptation aux nouvelles technologies</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Passion</h3>
+                        <p>Développement avec amour et attention aux détails</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Jonathan Bolibenga Wetokya. Développé avec ❤️</p>
+    </div>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>

@@ -3,118 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Bolibenga</title>
+    <title>Jonathan Bolibenga Wetokya - Développeur Full Stack</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="apropos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">J.wetoky<span>a</span></div>
-            <div class="burger-menu" id="burger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul id="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="apropos.html">À propos</a></li>
-                <li><a href="#competence">Compétences</a></li>
-                <li><a href="#project">project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <span>J.wetokya</span>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Section Hero -->
+    <section id="home" class="hero">
+        <div class="hero-container">
             <div class="hero-content">
-                <h1>Bonjour, je suis Développeur Back-end</h1>
-                <p>Spécialisé dans la création d'applications web, en les façonnant et en les construisant avec du code.</p>
+                <h1 class="hero-title">
+                    Bonjour, je suis
+                    <span class="gradient-text">Développeur Full Stack</span>
+                </h1>
+                <p class="hero-description">
+                    Spécialisé dans la création d'applications web modernes et performantes,
+                    en les façonnant avec passion et expertise technique.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
             </div>
-            <div class="photo-container">
-                <img src="images/jonathan.png" alt="Votre photo">
-            </div>
-        </div>
-    </header>
-
-    <section class="skills" id="competence">
-        <h2>Compétences</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <img src="images/html.png" alt="Contrôle de version Git ">
-                <h3>HTML5</h3>
-                <p>Compétent en HTML5 pour la création de pages web structurées et accessibles, optimisées pour différents appareils et navigateurs</p>
-            </div>
-            <div class="skill-card">
-                <img src="images/css.png" alt="Conception d'application">
-                <h3>Css 3</h3>
-                <p>Compétent en CSS pour concevoir des interfaces utilisateur attrayantes, réactives, et cohérentes, avec une attention particulière aux détails de style et à l'optimisation pour différents écrans</p>
-            </div>
-            <div class="skill-card">
-                <img src="images/js.png" alt="Développement Back-end">
-                <h3>Javascript</h3>
-                <p>Compétent en JavaScript pour développer des fonctionnalités dynamiques et interactives sur le web.</p>
-            </div>
-            <div class="skill-card">
-                <img src="images/node.png" alt="Développement Web">
-                <h3>Nodejs</h3>
-                <p>Compétent en Node.js pour développer des applications backend robustes et évolutives, en utilisant des API RESTful et une gestion efficace des  processus asynchrones.</p>
-            </div>
-            <div class="skill-card">
-                <img src="images/bdd.png" alt="Photographie">
-                <h3>Base de donnée</h3>
-                <p>Compétent  dans la conception, l'optimisation, et la gestion de bases de données relationnelles et non relationnelles, assurant ainsi une gestion efficace de vos bases de données.</p>
-            </div>
-            <div class="skill-card">
-                <img src="images/git.png" alt="Freelance">
-                <h3>Contrôle de version Git & github</h3>
-                <p> avec de compétentence en Git  pour le contrôle de version, la gestion de branches, et la collaboration en équipe, ainsi qu'une maîtrise de GitHub pour l'hébergement de projets.</p>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="images/jonathan.png" alt="Jonathan Bolibenga" class="profile-img">
+                    <div class="image-bg"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="projects" id="project">
-        <h2>Projets Réalisés</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3> GESTION D'UNE BIBLIOTHEQUE</h3>
-                <p>J'ai développé un système de gestion de bibliothèque permettant la gestion efficace des livres, des emprunts, et des utilisateurs. Le projet intègre une interface intuitive pour le personnel et les membres, avec des fonctionnalités de recherche avancée et de suivi des prêts.</p>
-            </div>
-            <div class="project-card">
-                <h3>CREATION D'UN BLOG</h3>
-                <p>J'ai développé un blog avec Adonis.js en tant que framework backend et SQLite3 pour la gestion de la base de données. Ce projet permet aux utilisateurs de créer, éditer, et supprimer des articles, tout en offrant des fonctionnalités comme les commentaires et les catégories d'articles.</p>
-            </div>
-            <div class="project-card">
-                <h3>GESTION D'ETUDIANTS</h3>
-                <p>J'ai développé une application de gestion d'étudiants en utilisant Express.js pour le backend et SQLite pour la base de données. L'application permet de gérer les informations des étudiants, y compris l'inscription, la mise à jour des données.</p>
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <p class="section-subtitle">Technologies et outils que je maîtrise</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <p>Création de pages web structurées et accessibles, optimisées pour tous les navigateurs et appareils.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <p>Design d'interfaces utilisateur modernes et réactives avec animations et effets avancés.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Développement de fonctionnalités dynamiques et interactives pour une expérience utilisateur optimale.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-vuejs"></i>
+                    </div>
+                    <h3>Vue.js</h3>
+                    <p>Création d'applications frontend modernes et réactives avec ce framework progressif.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>Développement d'applications backend robustes avec gestion d'API et processus asynchrones.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>NestJS</h3>
+                    <p>Framework Node.js pour construire des applications backend scalables et maintenables.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Base de données</h3>
+                    <p>Conception et optimisation de bases de données relationnelles et non-relationnelles.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git & GitHub</h3>
+                    <p>Contrôle de version, gestion de branches et collaboration en équipe avec Git et GitHub.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="contact" id="contact">
-        <h2>Connectez-vous avec moi</h2>
-        <div class="social-links">
-            <a href="https://wa.me/+243 995130915">
-                <img src="images/icons8-whatsapp-500.png" alt="logo whatsapp">
-            </a>
-            <a href="https://facebook.com/jonathan.bolibenga">
-                <img src="images/icons8-facebook-nouveau-500.png" alt="logo facebook">
-            </a>
-            <a href="https://github.com/JONATHAN-BOLIBENGA01">
-                <img src="images/icons8-github-500.png" alt="logo github">
-            </a>
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <p class="section-subtitle">Découvrez quelques-uns de mes travaux récents</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Système de Gestion de Bibliothèque</h3>
+                    <p>Application complète pour la gestion d'une bibliothèque avec interface utilisateur intuitive, système d'authentification, gestion des emprunts et recherche avancée.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-blog"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Plateforme de Blog Moderne</h3>
+                    <p>Blog dynamique développé avec AdonisJS, permettant la création, édition et suppression d'articles, système de commentaires et catégorisation avancée.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AdonisJS</span>
+                        <span class="tech-tag">SQLite3</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Application de Gestion Étudiants</h3>
+                    <p>Système complet de gestion d'étudiants avec tableau de bord administrateur, suivi des notes, génération de rapports et notifications automatiques.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Jonathan Bolibenga Wetokya. Made with Love.</p>
-    </footer>
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Connectons-nous</h2>
+            <p class="section-subtitle">N'hésitez pas à me contacter pour vos projets</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>jonathan.wetokya@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+243 995 130 915</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Lubumbashi, RD Congo</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://wa.me/+243995130915" class="social-link whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://facebook.com/jonathan.bolibenga" class="social-link facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://github.com/JONATHAN-BOLIBENGA01" class="social-link github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/jonathan-wetokya" class="social-link linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <script>
-        document.getElementById('burger-menu').addEventListener('click', function() {
-            var navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('active');
-        });
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Jonathan Bolibenga Wetokya. Développé avec amour ❤️</p>
+    </div>
+</footer>
 
-        AOS.init()
-    </script>
+<script src="app.js"></script>
 </body>
 </html>
