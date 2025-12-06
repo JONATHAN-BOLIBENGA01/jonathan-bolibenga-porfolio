@@ -40,7 +40,7 @@ body {
 
 .container {
     max-width: 1090px;
-    width: 70%;
+    width: 69%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -60,7 +60,7 @@ body {
 
 .navbar-container {
     max-width: 1090px;
-    width: 70%;
+    width: 69%;
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
@@ -412,12 +412,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    z-index: 10;
-    box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
-    object-fit: cover;
+    width: 205px;
+    height: 205px;
+    z-index: 9;
+    object-fit: contain;
 }
 
 
