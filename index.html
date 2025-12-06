@@ -11,21 +11,23 @@
 <body>
 <header>
     <nav class="navbar">
-        <div class="logo">
-            <span>J.wetokya</span>
+        <div class="navbar-container">
+            <div class="logo">
+                <span>J.wetokya</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
         <div class="burger-menu" id="burger-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="apropos.html">À propos</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 </header>
 
@@ -35,8 +37,8 @@
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Bonjour, je suis
-                    <span class="gradient-text">Développeur Full Stack</span>
+                    Jonathan wetokya<span class="gradient-text">,</span>
+                    <span class="gradient-text">Développeur web et mobile</span>
                 </h1>
                 <p class="hero-description">
                     Spécialisé dans la création d'applications web modernes et performantes,
@@ -48,9 +50,29 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="image-container">
+                <div class="tech-circles-container">
+                    <!-- Cercle Frontend (Gauche) -->
+                    <div class="tech-circle tech-circle-left">
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js-square" title="JavaScript"></i>
+                            <i class="fab fa-vuejs" title="Vue.js"></i>
+                            <i class="fab fa-react-native" title="React Native"></i>
+                        </div>
+                    </div>
+
                     <img src="images/jonathan.png" alt="Jonathan Bolibenga" class="profile-img">
-                    <div class="image-bg"></div>
+                    <!-- Cercle Backend (Droite) -->
+                    <div class="tech-circle tech-circle-right">
+                        <div class="tech-icons">
+                            <i class="fab fa-node-js" title="Node.js"></i>
+                            <i class="fas fa-server" title="NestJS"></i>
+                            <i class="fas fa-database" title="Database"></i>
+                            <i class="fab fa-docker" title="Docker"></i>
+                            <i class="fab fa-java" title="Java"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
