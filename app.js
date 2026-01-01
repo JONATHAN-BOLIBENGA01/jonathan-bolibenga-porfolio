@@ -75,14 +75,27 @@ const observer = new IntersectionObserver((entries) => {
 // Observer les éléments à animer
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll(
-        '.skill-card, .project-card, .value-card, .info-card'
+        '.skill-card, .project-card, .value-card, .info-card, .expertise-item, .info-item, .trust-card'
     );
 
-    animatedElements.forEach(el => {
+    animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(el);
+    });
+
+    // Animation spéciale pour les value-cards avec effet de cascade
+    const valueCards = document.querySelectorAll('.value-card');
+    valueCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    // Animation spéciale pour les trust-cards
+    const trustCards = document.querySelectorAll('.trust-card');
+    trustCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.2}s`;
     });
 });
 
@@ -91,8 +104,12 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
     if (hero) {
-        const speed = scrolled * 0.5;
-        hero.style.transform = `translateY(${speed}px)`;
+        const heroHeight = hero.offsetHeight;
+        // Limiter l'effet parallaxe jusqu'à ce que la hero section soit hors de vue
+        if (scrolled < heroHeight) {
+            const speed = scrolled * 0.5;
+            hero.style.transform = `translateY(${speed}px)`;
+        }
     }
 });
 
