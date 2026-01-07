@@ -75,9 +75,86 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    nav .logo{
-        padding-right: 15px;
+     .container {
+        width: 95%;
+    }
+    
+    .hero-container {
+        width: 95%;
+    }
+    .navbar {
+        padding: 1rem 0;
+    }
 
+    .navbar-container {
+        display: flex;
+        justify-content: space-between; /* Valid interpretation of 'equilibrer' */
+        align-items: center;
+        width: 100%;
+        padding: 0 1.5rem;
+        grid-template-columns: none;
+    }
+
+    .logo {
+        display: block; /* Make logo visible */
+        font-size: 1.4rem;
+        z-index: 1001;
+    }
+
+    .burger-menu {
+        display: flex;
+        position: static;
+        transform: none;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(15, 23, 42, 0.98);
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: var(--transition);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+        width: 100%;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-content {
+        padding: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        overflow: visible;
+    }
+
+    .tech-circles-container {
+        transform: scale(0.65);
+        width: 500px;
+        height: 320px;
+        flex-shrink: 0;
+        margin: 0;
     }
     .about-content h1 {
         font-size: 30px;

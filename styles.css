@@ -504,142 +504,57 @@ section {
     }
 }
 
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+/* Section Ils me font confiance - Logo Marquee */
+.trust-marquee {
+    width: 100%;
+    overflow: hidden;
+    padding: 3rem 0;
     position: relative;
     z-index: 1;
+    /* Edge fade effect */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
-.trust-card {
-    background: var(--bg-card);
-    padding: 2.5rem 2rem;
-    border-radius: var(--border-radius);
-    text-align: center;
-    border: 2px solid var(--border-color);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    display: block;
+.trust-track {
+    display: flex;
+    width: max-content;
+    gap: 7rem; /* Increased gap for larger logos */
+    animation: scroll 25s linear infinite;
+    align-items: center;
 }
 
-.trust-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(
-        transparent,
-        rgba(99, 102, 241, 0.1),
-        transparent 30%
-    );
-    animation: rotate-border 4s linear infinite;
-    opacity: 0;
-    transition: var(--transition);
+.trust-track:hover {
+    animation-play-state: paused;
 }
 
-.trust-card:hover::before {
-    opacity: 1;
-}
-
-@keyframes rotate-border {
+@keyframes scroll {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateX(calc(-50% - 2.5rem));
     }
 }
 
-.trust-card:hover {
-    transform: translateY(-15px);
-    border-color: var(--primary-color);
-    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
-}
-
-.trust-icon {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 1.5rem;
-    background: var(--bg-gradient);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.trust-logo-item {
+    display: block;
     transition: var(--transition);
-    z-index: 1;
-    overflow: hidden;
+    filter: none; /* Restore color */
+    opacity: 1;    /* Restore opacity */
 }
 
-.trust-icon::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: var(--bg-gradient);
-    opacity: 0.2;
-    transform: scale(1);
-    transition: var(--transition);
+.trust-logo-item:hover {
+    transform: scale(1.15); /* Slightly more scale on hover */
 }
 
-.trust-card:hover .trust-icon::after {
-    transform: scale(1.3);
-    opacity: 0;
-}
-
-.trust-card:hover .trust-icon {
-    transform: rotateY(360deg);
-}
-
-.trust-icon i {
-    font-size: 2.5rem;
-    color: white;
-    z-index: 1;
-}
-
-.trust-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2;
-    transition: var(--transition);
-}
-
-.trust-icon i + .trust-logo {
-    display: none; /* Cache le logo si l'icône est présente par défaut, ou vice versa selon préférence */
-}
-
-/* Si on veut afficher le logo et cacher l'icône quand le logo est présent */
-.trust-icon:has(.trust-logo) i {
-    display: none;
-}
-
-.trust-icon:has(.trust-logo) .trust-logo {
+.trust-brand-logo {
+    height: 90px; /* Enlarged logos */
+    width: auto;
+    object-fit: contain;
     display: block;
 }
 
-.trust-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-    font-weight: 700;
-    position: relative;
-    z-index: 1;
-}
-
-.trust-card p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    position: relative;
-    z-index: 1;
-}
 
 /* Section Compétences */
 .skills {
@@ -1483,11 +1398,29 @@ section {
         width: 95%;
     }
     .navbar {
-        padding: 1rem;
+        padding: 1rem 0;
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between; /* Valid interpretation of 'equilibrer' */
+        align-items: center;
+        width: 100%;
+        padding: 0 1.5rem;
+        grid-template-columns: none;
+    }
+
+    .logo {
+        display: block; /* Make logo visible */
+        font-size: 1.4rem;
+        z-index: 1001;
     }
 
     .burger-menu {
         display: flex;
+        position: static;
+        transform: none;
+        z-index: 1001;
     }
 
     .nav-links {
@@ -1512,15 +1445,111 @@ section {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+        width: 100%;
+        padding: 2rem 1.5rem;
     }
 
+    .hero-content {
+        padding: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        overflow: visible;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        overflow: visible;
+        position: relative;
+    }
+
+    .tech-circles-container {
+        /* Correction Mobile : Suppression du scale */
+        transform: none;
+        width: 100%;
+        max-width: 380px;
+        height: 280px;
+        flex-shrink: 0;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    /* Redimensionnement de l'image de profil pour le mobile - Version 3 (Z-index ensure) */
+    .tech-circles-container .profile-img {
+        width: 180px;
+        height: 180px;
+        /* Centrage absolu maintenu */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Ajout d'ombre pour bien détacher la photo */
+        z-index: 20; /* Ensure on top */
+    }
+
+    .tech-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .tech-circle-left {
+        left: 5px; /* Rapprochement vers le centre pour augmenter l'intersection */
+    }
+
+    .tech-circle-right {
+        right: 5px; /* Rapprochement vers le centre */
+    }
+
+    /* Repositionnement MANUEL des icônes pour le mobile (Cercle Gauche - 220px) */
+    .tech-circle-left .tech-icons i:nth-child(1) { left: 45px; top: 35px; }
+    .tech-circle-left .tech-icons i:nth-child(2) { left: 25px; top: 75px; }
+    .tech-circle-left .tech-icons i:nth-child(3) { left: 20px; top: 115px; }
+    .tech-circle-left .tech-icons i:nth-child(4) { left: 30px; top: 155px; }
+    .tech-circle-left .tech-icons i:nth-child(5) { left: 55px; top: 185px; }
+
+    /* Repositionnement MANUEL des icônes pour le mobile (Cercle Droit - 220px) */
+    .tech-circle-right .tech-icons i:nth-child(1) { right: 45px; top: 35px; }
+    .tech-circle-right .tech-icons i:nth-child(2) { right: 25px; top: 75px; }
+    .tech-circle-right .tech-icons i:nth-child(3) { right: 20px; top: 115px; }
+    .tech-circle-right .tech-icons i:nth-child(4) { right: 30px; top: 155px; }
+    .tech-circle-right .tech-icons i:nth-child(5) { right: 55px; top: 185px; }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
     }
 
     .image-container {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        aspect-ratio: 1/1;
     }
 
     .contact-content {
@@ -1544,6 +1573,18 @@ section {
     .values-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    .trust-brand-logo {
+        height: 65px; /* Scaled down for mobile */
+    }
+
+    .trust-track {
+        gap: 4rem; /* Smaller gap on mobile */
+    }
+
+    section {
+        padding: 3rem 0; /* Slightly less padding on mobile */
+    }
 }
 
 @media (max-width: 480px) {
@@ -1563,6 +1604,14 @@ section {
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .trust-brand-logo {
+        height: 50px; /* Even smaller for very small screens */
+    }
+
+    .trust-track {
+        gap: 3rem;
     }
 
     .image-container {
