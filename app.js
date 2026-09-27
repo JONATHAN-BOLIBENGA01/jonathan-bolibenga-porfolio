@@ -75,16 +75,52 @@ const observer = new IntersectionObserver((entries) => {
 // Observer les éléments à animer
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll(
-        '.skill-card, .project-card, .value-card, .info-card, .expertise-item, .info-item, .trust-card'
+        '.skill-square-tile, .experience-card, .additional-skills-card, .project-item, .value-card, .info-card, .expertise-item, .info-item, .trust-card'
     );
 
     animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        el.style.transitionDelay = `${index * 0.1}s`;
+        el.style.transform = 'translateY(25px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        el.style.transitionDelay = `${(index % 8) * 0.05}s`;
         observer.observe(el);
     });
+
+    // Filtrage interactif des compétences (Bento Grid)
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const bentoCards = document.querySelectorAll('.bento-card');
+
+    if (filterTabs.length && bentoCards.length) {
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.getAttribute('data-filter');
+
+                bentoCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'flex';
+                        requestAnimationFrame(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0) scale(1)';
+                        });
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(15px) scale(0.97)';
+                        setTimeout(() => {
+                            const currentActiveTab = document.querySelector('.filter-tab.active');
+                            const currentFilter = currentActiveTab ? currentActiveTab.getAttribute('data-filter') : 'all';
+                            if (currentFilter !== 'all' && card.getAttribute('data-category') !== currentFilter) {
+                                card.style.display = 'none';
+                            }
+                        }, 260);
+                    }
+                });
+            });
+        });
+    }
 
     // Animation spéciale pour les value-cards avec effet de cascade
     const valueCards = document.querySelectorAll('.value-card');
@@ -99,19 +135,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Effet de parallaxe léger pour le hero
+// Parallaxe interne uniquement : le hero ne quitte jamais son flux
+// (évite le chevauchement avec la section Skills)
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
-    if (hero) {
-        const heroHeight = hero.offsetHeight;
-        // Limiter l'effet parallaxe jusqu'à ce que la hero section soit hors de vue
-        if (scrolled < heroHeight) {
-            const speed = scrolled * 0.5;
-            hero.style.transform = `translateY(${speed}px)`;
+    const heroImage = document.querySelector('.hero-image');
+    const heroContent = document.querySelector('.hero-content');
+    if (!hero) return;
+
+    const scrolled = window.pageYOffset;
+    const heroHeight = hero.offsetHeight;
+
+    hero.style.transform = '';
+
+    if (scrolled < heroHeight) {
+        if (heroImage) {
+            heroImage.style.transform = `translateY(${scrolled * 0.18}px)`;
         }
+        if (heroContent) {
+            heroContent.style.transform = `translateY(${scrolled * 0.06}px)`;
+        }
+    } else {
+        if (heroImage) heroImage.style.transform = '';
+        if (heroContent) heroContent.style.transform = '';
     }
-});
+}, { passive: true });
 
 // Animation des compteurs (si vous ajoutez des stats plus tard)
 function animateCounter(element, target, duration = 2000) {

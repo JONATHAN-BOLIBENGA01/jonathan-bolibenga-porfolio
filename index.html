@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Bolibenga Wetokya</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
 <header>
@@ -16,10 +17,10 @@
                 <span>J.wetokya</span>
             </div>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="apropos.html">À propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="apropos.html">About</a></li>
+                <li><a href="#competences">Skills</a></li>
+                <li><a href="#projets">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="burger-menu" id="burger-menu">
@@ -38,15 +39,15 @@
             <div class="hero-content">
                 <h1 class="hero-title">
                     Jonathan wetokya<span class="gradient-text">,</span>
-                    <span class="gradient-text">Développeur web et mobile.</span>
+                    <span class="gradient-text">Software Engineer.</span>
                 </h1>
                 <p class="hero-description">
-                    Votre projet mérite mieux qu’une simple application.
-                    Je conçois des solutions digitales fiables, performantes et pensées pour durer.
+                    Your project deserves better than a simple application.
+                    I design reliable, performant and durable digital solutions.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Me contacter</a>
-                    <a href="#projets" class="btn btn-secondary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-primary">Contact me</a>
+                    <a href="#projets" class="btn btn-secondary">See my projects</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -62,7 +63,9 @@
                         </div>
                     </div>
 
-                    <img src="images/jo.png" alt="Jonathan Bolibenga" class="profile-img">
+                    <div class="profile-frame">
+                        <img src="images/jo.png" alt="Jonathan Bolibenga" class="profile-img">
+                    </div>
                     <!-- Cercle Backend (Droite) -->
                     <div class="tech-circle tech-circle-right">
                         <div class="tech-icons">
@@ -78,75 +81,164 @@
         </div>
     </section>
 
-    <!-- Section Compétences -->
+    <!-- Section Compétences (Design façon référence utilisateur) -->
     <section id="competences" class="skills">
+        <div class="skills-wrapper">
+            <h2 class="skills-title">MY SKILLS</h2>
+
+            <div class="skills-top-row">
+                <!-- Grille 4x2 de tuiles carrées -->
+                <div class="skills-tiles-grid">
+                    <!-- 1. JavaScript -->
+                    <div class="skill-square-tile" title="JavaScript" data-name="JavaScript">
+                        <i class="fa-brands fa-square-js" style="color: #F7DF1E;"></i>
+                    </div>
+
+                    <!-- 2. React.js -->
+                    <div class="skill-square-tile" title="React.js" data-name="React.js">
+                        <i class="fa-brands fa-react" style="color: #61DAFB;"></i>
+                    </div>
+
+                    <!-- 3. Tailwind CSS -->
+                    <div class="skill-square-tile" title="Tailwind CSS" data-name="Tailwind CSS">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                    </div>
+
+                    <!-- 4. Nest.js -->
+                    <div class="skill-square-tile" title="Nest.js" data-name="Nest.js">
+                        <i class="devicon-nestjs-original colored"></i>
+                    </div>
+
+                    <!-- 5. Node.js -->
+                    <div class="skill-square-tile" title="Node.js" data-name="Node.js">
+                        <i class="fa-brands fa-node-js" style="color: #68A063;"></i>
+                    </div>
+
+                    <!-- 6. PostgreSQL -->
+                    <div class="skill-square-tile" title="PostgreSQL" data-name="PostgreSQL">
+                        <i class="devicon-postgresql-plain colored"></i>
+                    </div>
+
+                    <!-- 7. Spring Boot -->
+                    <div class="skill-square-tile" title="Spring Boot" data-name="Spring Boot">
+                        <i class="devicon-spring-original colored"></i>
+                    </div>
+
+                    <!-- 8. Python -->
+                    <div class="skill-square-tile" title="Python" data-name="Python">
+                        <i class="fa-brands fa-python" style="color: #3776AB;"></i>
+                    </div>
+                </div>
+
+                <!-- Carte d'Expérience (Droite) -->
+                <div class="experience-card">
+                    <span class="exp-number">3</span>
+                    <span class="exp-label">Years<br>Experience<br>Working</span>
+                    <a href="images/Jonathan%20bolibenga%20cv.png" download="Jonathan_Bolibenga_CV.png" class="btn-download-cv">
+                        DOWNLOAD MY CV
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carte Compétences Additionnelles (Bas) -->
+            <div class="additional-skills-card">
+                <h3 class="additional-skills-title">ADDITIONAL SKILLS</h3>
+                <div class="additional-skills-icons">
+                    <!-- Git -->
+                    <div class="add-skill-item" title="Git">
+                        <i class="fa-brands fa-git-alt" style="color: #F05032;"></i>
+                        <span class="add-skill-label">Git</span>
+                    </div>
+
+                    <!-- Azure (Data Engineering) -->
+                    <div class="add-skill-item" title="Azure (Data Engineering)">
+                        <i class="devicon-azure-plain colored"></i>
+                        <span class="add-skill-label">Azure Data</span>
+                    </div>
+
+                    <!-- Power BI -->
+                    <div class="add-skill-item" title="Power BI">
+                        <i class="fa-solid fa-chart-column" style="color: #F2C811;"></i>
+                        <span class="add-skill-label">Power BI</span>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="add-skill-item" title="Docker">
+                        <i class="fa-brands fa-docker" style="color: #2496ED;"></i>
+                        <span class="add-skill-label">Docker</span>
+                    </div>
+
+                    <!-- Machine Learning (ML) -->
+                    <div class="add-skill-item" title="Machine Learning (ML)">
+                        <i class="fa-solid fa-brain" style="color: #C084FC;"></i>
+                        <span class="add-skill-label">Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
         <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
-            <p class="section-subtitle">Technologies et outils que je maîtrise</p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Selected work across logistics, AI and enterprise software</p>
+            <div class="projects-grid">
+                <article class="project-item">
+                    <span class="project-index">01</span>
+                    <h3>Indusa Express</h3>
+                    <p>A logistics delivery platform. I designed and built both the frontend and the backend: parcel tracking, delivery management and the operational interface.</p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Nest.js</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <a href="https://indusaexpress.com/" class="project-link" target="_blank" rel="noopener noreferrer">
+                            Visit site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <h3>HTML5</h3>
-                    <p>Création de pages web structurées et accessibles, optimisées pour tous les navigateurs et appareils.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
+                </article>
+
+                <article class="project-item">
+                    <span class="project-index">02</span>
+                    <h3>Intelligent visual assistance</h3>
+                    <p>A system combining deep learning and embedded hardware to assist people with visual impairments, with real-time detection and guidance.</p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Deep Learning</span>
+                            <span>Embedded</span>
+                        </div>
                     </div>
-                    <h3>CSS3</h3>
-                    <p>Design d'interfaces utilisateur modernes et réactives avec animations et effets avancés.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-js-square"></i>
+                </article>
+
+                <article class="project-item">
+                    <span class="project-index">03</span>
+                    <h3>Facial recognition</h3>
+                    <p>A facial recognition application for identification and authentication, based on image processing and machine learning.</p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>Machine Learning</span>
+                        </div>
                     </div>
-                    <h3>JavaScript</h3>
-                    <p>Développement de fonctionnalités dynamiques et interactives pour une expérience utilisateur optimale.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-vuejs"></i>
+                </article>
+
+                <article class="project-item">
+                    <span class="project-index">04</span>
+                    <h3>Inventory management</h3>
+                    <p>A business inventory application built with Spring Boot: stock tracking, movements, alerts and real-time product monitoring.</p>
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span>Spring Boot</span>
+                            <span>Java</span>
+                            <span>PostgreSQL</span>
+                        </div>
                     </div>
-                    <h3>Vue.js</h3>
-                    <p>Création d'applications frontend modernes et réactives avec ce framework progressif.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3>Node.js</h3>
-                    <p>Développement d'applications backend robustes avec gestion d'API et processus asynchrones.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>NestJS</h3>
-                    <p>Framework Node.js pour construire des applications backend scalables et maintenables.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Base de données</h3>
-                    <p>Conception et optimisation de bases de données relationnelles et non-relationnelles.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-                    <h3>Git & GitHub</h3>
-                    <p>Contrôle de version, gestion de branches et collaboration en équipe avec Git et GitHub.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-docker"></i>
-                    </div>
-                    <h3>Docker</h3>
-                    <p>Conteneurisation d’applications pour assurer leur portabilité, leur cohérence et leur déploiement simplifié dans différents environnements.</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -154,8 +246,8 @@
     <!-- Section Ils me font confiance -->
     <section class="trust-section">
         <div class="container">
-            <h2 class="section-title">Ils me font confiance</h2>
-            <p class="section-subtitle">Entreprises et organisations qui ont fait appel à mes services</p>
+            <h2 class="section-title">They trust me</h2>
+            <p class="section-subtitle">Companies and organizations that have called on my services</p>
             <div class="trust-marquee">
                 <div class="trust-track">
                     <a href="https://logiqsoft.io/" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
@@ -164,7 +256,7 @@
                     <a href="https://inafrica.tech/" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
                         <img src="images/inafrica.png" alt="Inafra Logo" class="trust-brand-logo">
                     </a>
-                    <a href="#" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
+                    <a href="https://indusaexpress.com/" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
                         <img src="images/indusa.png" alt="Indusa Express Logo" class="trust-brand-logo">
                     </a>
                     <!-- Duplicate for infinite scroll loop -->
@@ -174,95 +266,9 @@
                     <a href="https://inafrica.tech/" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
                         <img src="images/inafrica.png" alt="Inafra Logo" class="trust-brand-logo">
                     </a>
-                    <a href="#" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
+                    <a href="https://indusaexpress.com/" class="trust-logo-item" target="_blank" rel="noopener noreferrer">
                         <img src="images/indusa.png" alt="Indusa Express Logo" class="trust-brand-logo">
                     </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projets" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projets Réalisés</h2>
-            <p class="section-subtitle">Découvrez quelques-uns de mes travaux récents</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3>Système de Gestion de Bibliothèque</h3>
-                    <p>Application complète pour la gestion d'une bibliothèque avec interface utilisateur intuitive, système d'authentification, gestion des emprunts et recherche avancée.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-blog"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3>Plateforme de Blog Moderne</h3>
-                    <p>Blog dynamique développé avec AdonisJS, permettant la création, édition et suppression d'articles, système de commentaires et catégorisation avancée.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">AdonisJS</span>
-                        <span class="tech-tag">SQLite3</span>
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">TailwindCSS</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3>Application de Gestion Étudiants</h3>
-                    <p>Système complet de gestion d'étudiants avec tableau de bord administrateur, suivi des notes, génération de rapports et notifications automatiques.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Bootstrap</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-tags"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="http://trucs-pas-chers-esis.great-site.net/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3>Application de vente en ligne</h3>
-                    <p>Une plateforme de vente d'acticle pas chers proposer des etudinats</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Php</span>
-                        <span class="tech-tag">Postgresql</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Tailwindcss</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -271,13 +277,13 @@
     <!-- Section Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Connectons-nous</h2>
-            <p class="section-subtitle">N'hésitez pas à me contacter pour vos projets</p>
+            <h2 class="section-title">Let's connect</h2>
+            <p class="section-subtitle">Feel free to reach out for your next project</p>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>bolibengawetokejonathan13@gmail.com</span>
+                        <span>jonathanwetokya@gmail.com</span>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -285,7 +291,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Lubumbashi, RD Congo</span>
+                        <span>Lubumbashi, DR Congo</span>
                     </div>
                 </div>
                 <div class="social-links">
@@ -309,7 +315,7 @@
 
 <footer class="footer">
     <div class="container">
-        <p>&copy; 2026 Jonathan Bolibenga Wetokya. Développé avec passion ❤️</p>
+        <p>&copy; 2026 Jonathan Bolibenga Wetokya. Built with passion</p>
     </div>
 </footer>
 
